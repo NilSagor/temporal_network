@@ -3,7 +3,13 @@
 The problem of data changing over time 
 
 
-How to tackle Concept drift problem in large data-sets, which are represented by temporal networks or data that can be transformed. 
+[22/03/2021]
+How pattern recurrence or pattern stability could tackle concept drift problem in large data set which are represented by temporal networks or data that can be transformed.
+
+
+~~How to tackle Concept drift problem in large data-sets, which are represented by temporal networks or data that can be transformed.~~ 
+
+
 
 
 
@@ -14,12 +20,24 @@ How to tackle Concept drift problem in large data-sets, which are represented by
 - more attention on higher weight and less attention on low weighted data.
 - choosing a particular parameterize of the selected model at every time step.
 - identify possible change patterns
-  
+[22/3/2021]
+- when apply to adjacency or distances, how close they are 
+- are they create cluster in any space [linear or multi-dimensional space]
+- how much variation are there in the dimension.
+- could   it possible to use multi-variate time series or other data-types.
+- 
 
 
 ## Definition:
 **Concept Drift:** the statistical properties of the target variable which the model is trying to predict, change over time in unforeseen ways. (wikipedia)
 Relationship between inputs and outputs variables in the underlying problem over time.
+
+**community :** a community with respect to  graphs can be defined as a subset of nodes that are densely connected to each other and loosely connected to the nodes in the other communities in the same graph.
+
+** Community Detection:** in a large scale network such as online social network we could have millions of nodes and edges. Detecting communities in such network becomes a herculean task.
+
+**Agglomerative methods:**
+Divisive methods: 
 
 
 # related work
@@ -41,8 +59,10 @@ Relationship between inputs and outputs variables in the underlying problem over
 - sampling is done once for each segment of data that contains several time instants.
 
 	- sampling
-	For each physical node $v_{i}$, compute the standard deviation of the state network measure. 
-	- temporal coding
+	For each physical node $v_{i}$, compute the standard deviation of the state network measure. here communicability measure $\sigma_{v_{i}}$
+ is the standard deviation of the values $M_{v_{i}(t)}, T = 1, 2, ..., T$
+ then select $P$ physical nodes with highest standard deviation to create the target
+ 	- temporal coding
 	For each selected physical node $v_{r_{i}}$, compute the similarity of network measures of every pair of the state node  $S_{i}(t_{l}, t_{m}), i,m = 1, 2, ..., T, l\neq m$  
 	then each pair of state node  say nodes $v_{r_{i}}(t_{l})$ and $v_{r_{j}}(t_{m})$ gets a weight $C_{1}S_{i}(t_{l}, t_{m})$ where $C_{1}\in [0,1]$ is a parameter to define the influence strength of temporal feature in the final target network. 
 	by this way build $P$ separated networks.
@@ -66,6 +86,8 @@ Relationship between inputs and outputs variables in the underlying problem over
 10. Learning under Concept Drift: an Overview
 11. Concept Drift Detection for Streaming Data 
 12. A Review on Dynamic Concept Drift
+13.  Community based event detection in temporal networks
+14. 
 
 web:
 [https://machinelearningmastery.com/gentle-introduction-concept-drift-machine-learning/]
