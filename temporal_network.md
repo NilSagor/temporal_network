@@ -36,8 +36,9 @@ Relationship between inputs and outputs variables in the underlying problem over
 
 ** Community Detection:** in a large scale network such as online social network we could have millions of nodes and edges. Detecting communities in such network becomes a herculean task.
 
-**Agglomerative methods:**
-Divisive methods: 
+**Agglomerative methods:** llll.
+
+**Divisive methods: ** hhh
 
 
 # related work
@@ -50,6 +51,21 @@ Divisive methods:
 ##### Papers:
 1. Temporal Network Pattern Identification by Community Modelling -nature
 **Method:**  from large temporal network construct static reduced network (target network), then community detection is performed on the network and proposed a method to find out the best number of communities.
+
+
+**particle competition method:**
+Assume a network $G = (V, L)$
+the set of nodes $v = \{ v_{1}, v_{2}, ... v_{|v|} \}$
+the set of links or edge $L = \{l_{1}, l_{2}, ... l_{|L|}\}$
+the weight of the link between nodes for unweighted network $V_{i}$ and $V_{j}$ or $\{0,1\}$ is $l_{(i,j)}$
+
+At each iteration time $(t)$
+* a particle selects a neighbor $v_{j}$ to visit choosing between a random walk (particle come back to visit a high dominated neighbor).
+* the particle lose energy if it visits a node that is in the domain of a rival particle.
+* it re-charges it energy when visiting an already dominated node by itself.
+* If the particle has energy below a predefined low energy level then the particle becomes exhausted and it will be reset t a randomly selected node in the next iteration.
+
+
 **Target network construction**
 - First given temporal network  $G(t) = (V, L(t))$ transform into a reduced single layer network (target network) $G_{r} = (V_{r}, L_{r})$
 - preserve the spatial-temporal pattern of $G(t)$
@@ -57,6 +73,7 @@ Divisive methods:
 - for shortest paths connecting two nodes and also longer paths with a lower contribution communicability measures used
 **cummunicability** has high computational complexity **alternative** PageRank
 - sampling is done once for each segment of data that contains several time instants.
+
 
 	- sampling
 	For each physical node $v_{i}$, compute the standard deviation of the state network measure. here communicability measure $\sigma_{v_{i}}$
