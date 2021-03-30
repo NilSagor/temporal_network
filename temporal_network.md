@@ -88,8 +88,18 @@ At each iteration time $(t)$
 	 the weight connection between $v_{r_{i}}(t_{l})$ and $v_{r_{j}}(t_{m})$ is $C_{2}S_{ij}(t_{l}, t_{m})$ where $C_{2}$  is constant characterize the the influence strength of spatial correlation in the largest network. 
 - 
 
+**Best particle**
+It is important to determine the optimal number of particle $K$ for finding best division of the network into communities using particle competition. By layout the localized average domination level measure author displayed before
+$$
+R(k) = min\{ \frac{1}{V_{1}} \sum_{u \in N_{1}} (N_{u}^{1}(\infty)) \}
+$$
 
-add something
+First calculate the average highest domination level for the nodes occupied by each particle.
+then choose the minimum of the $K$ average highest domination levels as the proposed measure $R(K)$
+
+- if we put exactly $K$ particles in a network with $K$ communities, then each particle is expected to dominate a community and maximal domination level of the nodes $R(K)$ will be high.
+- if we put more particles than number of communities, then at least one community will have more than one particle competing for dominance and as a result low value of particle of $R(K)$
+- if we put less than $K$ particles in the network, the competition within the same community also happens due to the equal behavior of all particles and again $R(K)$ will be low.
 
 
 
