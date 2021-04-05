@@ -10,6 +10,17 @@ How pattern recurrence or pattern stability could tackle concept drift problem i
 ~~How to tackle Concept drift problem in large data-sets, which are represented by temporal networks or data that can be transformed.~~ 
 
 
+## objectives
+change detection tests for graph
+
+- mapping each graph to a numeric vector through embedding
+- detect changes in stationarity through multivariate change detection
+
+
+## Backgound
+- identification problem of neorons in extra-cellular brain recordings based on their activity.
+
+~~one to one correspondence between vertices over time.~~
 
 
 
