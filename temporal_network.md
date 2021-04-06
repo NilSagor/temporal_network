@@ -70,7 +70,7 @@ Similarity measures
 
 Bivariate non-linear measures
 - Entraining chaotic dynamics
-
+### Questions about plan to resolve
 - How many factors does the design have, and are the levels of these factors fixed or random?
 - Are control conditions needed, and what should they be?
 - Manipulation checks; did the manipulation really work?
