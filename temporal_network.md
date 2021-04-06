@@ -65,9 +65,26 @@ Similarity measures
 - Dynamic Time Warping
 - Hidden Markov Models
 - Edit Distance
+- Incidence matrix
+- Block design
 
 Bivariate non-linear measures
 - Entraining chaotic dynamics
+
+- How many factors does the design have, and are the levels of these factors fixed or random?
+- Are control conditions needed, and what should they be?
+- Manipulation checks; did the manipulation really work?
+- What are the background variables?
+- What is the sample size. How many units must be collected for the experiment to be generalisable and have enough power?
+- What is the relevance of interactions between factors?
+- What is the influence of delayed effects of substantive factors on outcomes?
+- How do response shifts affect self-report measures?
+- How feasible is repeated administration of the same measurement instruments to the same units at different occasions, with a post-test and follow-up tests?
+- What about using a proxy pretest?
+- Are there lurking variables?
+- Should the client/patient, researcher or even the analyst of the data be blind to conditions?
+- What is the feasibility of subsequent application of different conditions to the same units?
+-How many of each control and noise factors should be taken into account?
 
 
 # related work
