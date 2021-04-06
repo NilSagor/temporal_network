@@ -36,7 +36,14 @@ change detection tests for graph
 - are they create cluster in any space [linear or multi-dimensional space]
 - how much variation are there in the dimension.
 - could   it possible to use multi-variate time series or other data-types.
-- 
+ stationary hypothesis
+- trend
+- Seasonal component
+- Cyclical component
+
+- Irregular component
+Irregular effects are the impact of random events such as strikes, earthquakes and sudden change in the weather. By their nature, the completely unpredicatable effect.
+
 
 
 ## Definition:
@@ -50,6 +57,17 @@ Relationship between inputs and outputs variables in the underlying problem over
 **Agglomerative methods:** llll.
 
 **Divisive methods: ** hhh
+
+
+
+## Experimental Design
+Similarity measures
+- Dynamic Time Warping
+- Hidden Markov Models
+- Edit Distance
+
+Bivariate non-linear measures
+- Entraining chaotic dynamics
 
 
 # related work
@@ -130,3 +148,4 @@ then choose the minimum of the $K$ average highest domination levels as the prop
 web:
 [https://machinelearningmastery.com/gentle-introduction-concept-drift-machine-learning/]
 https://www.moresteam.com/toolbox/design-of-experiments.cfm
+https://github.com/briatte/awesome-network-analysis
