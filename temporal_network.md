@@ -20,77 +20,26 @@ change detection tests for graph
 ## Backgound
 - identification problem of neorons in extra-cellular brain recordings based on their activity.
 
-## Backgound
 
 Discrete time Markov chain is sequence of random variables, known as a stochastic process. in which the value of the next variable depends only on the value of the current variable, not any variable in the past. 
 For instance a machine may have two states, $A$ and $E$. when it is in state $A$, there is a 40% chance of moving to state $E$ and a 60% chance of it remaining in state $A$.when it is in state $E$, there is a 70% chance of moving to state $A$ and a 30% chance of it remaining in state $E$. The sequence of states of the machine is Markov chain. The sequence of states of the machine is a Markov chain. If we denote the chain by $X_{0}, X_{1}, X_{2}, ...$ then $X_{0}$ is the state which the machine starts in and $X_{10}$ is the random variable describing its state after 10 trasnsitions.
 
 
 Random wal k on Directed Graphs
-A major application of random walks on directed graphs comes from trying to establish
-the importance of pages on the World Wide Web. One way to do this would be to take
-a random walk on the web and rank pages according to their stationary probability.
-However, several situations occur in random walks on directed graphs that did not arise
-with undirected graphs. One difficulty occurs if there is a node with no out edges. In this
-case, the directed graph is not strongly connected and so Markov chain is not strongly
-connected either even though the underlying undirected graph may be connected. When
-the walk encounters this node the walk disappears. Another difficulty is that a node or
-a strongly connected component with no in edges is never reached. One way to resolve
-these difficulties is to introduce a random restart condition. At each step, with some
-probability r, jump to a node selected uniformly at random and with probability 1 − r
-select an edge at random and follow it. If a node has no out edges, the value of r for that
-node is set to one. This has the effect of converting the graph to a strongly connected
-graph so that the stationary probabilities exis
+A major application of random walks on directed graphs comes from trying to establish the importance of pages on the World Wide Web. One way to do this would be to take a random walk on the web and rank pages according to their stationary probability. However, several situations occur in random walks on directed graphs that did not arise with undirected graphs. One difficulty occurs if there is a node with no out edges. In this case, the directed graph is not strongly connected and so Markov chain is not strongly connected either even though the underlying undirected graph may be connected. When the walk encounters this node the walk disappears. Another difficulty is that a node or a strongly connected component with no in edges is never reached. One way to resolve these difficulties is to introduce a random restart condition. At each step, with some probability r, jump to a node selected uniformly at random and with probability 1 − r
+select an edge at random and follow it. If a node has no out edges, the value of r for that node is set to one. This has the effect of converting the graph to a strongly connected graph so that the stationary probabilities exists
 
-The Markov Chain Monte Carlo method is a technique for sampling a multivariate
-probability distribution p(x), where x = (x1, x2, . . . , xd) is the set of variables. Given the
-probability distribution p (x), one might wish to calculate the marginal distribution
-p (x1) = X
-x2,...,xd
-p (x1, . . . , xd)
-or the expectation of some functionf (x)
-E (f) = X
-x1,...,xd
+The Markov Chain Monte Carlo method is a technique for sampling a multivariate probability distribution p(x), where x = (x1, x2, . . . , xd) is the set of variables. Given the probability distribution p (x), one might wish to calculate the marginal distribution
+p (x1) = X x2,...,xd
+p (x1, . . . , xd) or the expectation of some functionf (x)
+E (f) = X x1,...,xd
 f (x1, . . . , xd) p (x1, . . . , xd).
-The difficulty is that both computations require a summation over an exponential number
-of values. If each xi can take on a value from the set {1, 2, . . . , n} of values, then there
-are n
-d possible values for x. One could compute an approximate answer by generating
-a sample set of values for x = (x1, . . . , xd) according to the distribution p (x1, . . . , xd).
-This is done by designing a Markov chain whose stationary probabilities are exactly
-p(x1, x2, . . . , xd) and running the chain for a sufficiently large number of steps and averaging f over the states seen in the run. The number of steps must be large enough that
-we are close to the limit which is the stationary distribution. In the rest of this section,
-we will show that under some mild conditions, the number of steps needed grows only
-polynomially, though the total number of states grows exponentially with d.
-For ease of explanation, assume that the variables take on values from some finite
-set. Create a directed graph with one node corresponding to each possible value of x. A
-random walk on the the graph is designed so that the stationary probability of the walk is
-p(x). The walk is designed by specifying the probability of the transition from one node
-to another in such a way as to achieve the desired stationary distribution. Two common
-techniques for designing the walks are the Metropolis-Hasting algorithm and Gibbs sampling. We will see that the sequence of nodes after a sufficient number of steps of the walk
-provides a good sample of the distribution. The number of steps the walk needs to take
-depends on its convergence rate to its stationary distribution. We will show that this rate
-is related to a natural quantity called the minimum escape probability (MEP).
-We used x ∈ Rd
-to emphasize that our distributions are multi-variate. From a Markov
-chain perspective, each value x can take on is a state, i.e., a node of the graph on which
-23
-the random walk takes place. Henceforth, we will use the subscripts i, j, k, . . . to denote
-states and will use pi
-instead of p(x1, x2, . . . , xd) to denote the probability of the state
-corresponding to a given set of values for the variables. Recall that in the Markov chain
-terminology, nodes of the graph are called states.
-Recall the notation that p
-(t)
-is the row vector of probabilities of the random walk
-being at each state (node of the graph) at time t. So, p
-(t) has as many components as
-there are states and its i
-th component, p
-(t)
-i
-, is the probability of being in state i at time
-t. Recall the long-term (t-step) average is
+The difficulty is that both computations require a summation over an exponential number of values. If each xi can take on a value from the set {1, 2, . . . , n} of values, then there are n d possible values for x. One could compute an approximate answer by generating a sample set of values for x = (x1, . . . , xd) according to the distribution p (x1, . . . , xd).
+
+This is done by designing a Markov chain whose stationary probabilities are exactly p(x1, x2, . . . , xd) and running the chain for a sufficiently large number of steps and averaging f over the states seen in the run. The number of steps must be large enough that we are close to the limit which is the stationary distribution. In the rest of this section, we will show that under some mild conditions, the number of steps needed grows only polynomially, though the total number of states grows exponentially with d. For ease of explanation, assume that the variables take on values from some finite set. Create a directed graph with one node corresponding to each possible value of x. A random walk on the the graph is designed so that the stationary probability of the walk is p(x). The walk is designed by specifying the probability of the transition from one node to another in such a way as to achieve the desired stationary distribution. Two common
+techniques for designing the walks are the Metropolis-Hasting algorithm and Gibbs sampling. We will see that the sequence of nodes after a sufficient number of steps of the walk provides a good sample of the distribution. The number of steps the walk needs to take depends on its convergence rate to its stationary distribution. We will show that this rate is related to a natural quantity called the minimum escape probability (MEP).
+We used x ∈ Rd to emphasize that our distributions are multi-variate. From a Markov chain perspective, each value x can take on is a state, i.e., a node of the graph on which 23 the random walk takes place. Henceforth, we will use the subscripts i, j, k, . . . to denote states and will use pi instead of p(x1, x2, . . . , xd) to denote the probability of the state corresponding to a given set of values for the variables. Recall that in the Markov chain terminology, nodes of the graph are called states. 
+Recall the notation that p(t) is the row vector of probabilities of the random walk being at each state (node of the graph) at time t. So, p(t) has as many components as there are states and its i th component, p(t)i , is the probability of being in state i at time t. Recall the long-term (t-step) average is
 a
 (t) =
 1
@@ -102,22 +51,15 @@ p
 (t−1)
 
 . (1.3)
-The expected value of the function
-P
-f under the probability distribution p is E(f) =
-i
-fipi
-. Our estimate of this quantity will be the average value of f at the states seen in
-a t step run. Call this estimate a. Clearly, the expected value of a is
+The expected value of the function P f under the probability distribution p is E(f) = i
+fipi . Our estimate of this quantity will be the average value of f at the states seen in a t step run. Call this estimate a. Clearly, the expected value of a is
 E(a) = X
 i
 fia
 (t)
 i
 .
-The expectation here is with respect to the “coin tosses” of the algorithm, not with respect
-to the underlying distribution p. Letting fmax denote the maximum absolute value of f.
-It is easy to see that
+The expectation here is with respect to the “coin tosses” of the algorithm, not with respect to the underlying distribution p. Letting fmax denote the maximum absolute value of f. It is easy to see that
 
 
 
@@ -137,19 +79,7 @@ i
 | = fmax|p − a
 (t)
 |1 (1.4)
-where the quantity |p − a
-(t)
-|1 is the l1 distance between the probability distributions p
-and a
-(t) and is often called the “total variation distance” between the distributions. We
-will build tools to upper bound |p − a
-(t)
-|1. Since p is the steady state distribution, the t
-for which |p−a
-(t)
-|1 becomes small is determined by the rate of convergence of the Markov
-chain to its steady state.
-The following proposition is often useful.
+where the quantity |p − a(t)|1 is the l1 distance between the probability distributions p and a (t) and is often called the “total variation distance” between the distributions. We will build tools to upper bound |p − a(t)|1. Since p is the steady state distribution, the t for which |p−a(t)|1 becomes small is determined by the rate of convergence of the Markov chain to its steady state.The following proposition is often useful.
 Proposition 1.9 For two probability distributions p and q, |p − q|1 = 2P
 i
 (pi − qi)
@@ -172,24 +102,13 @@ pik,ik−1
 pik−1,ik−2
 · · · pi2,i1
 .
-Given only the sequence of states seen, one cannot tell if time runs forward or backward,
-both having the same probability. More important is the fact that time reversibility
-simplifies the underlying mathematics as illustrated in the following lemma. The lemma
-states that if a probability distribution q has the property that the probability of traversing
-each edge is the same in both directions, then the probability distribution must be the
-steady state distribution of the Markov chain. The lemma is used frequently.
-Lemma 1.10 In a strongly connected Markov chain with transition probabilities pij , if a
-vector q with non-negative components satisfies
-qipij = qjpji
-for all i and j, then qi/
+Given only the sequence of states seen, one cannot tell if time runs forward or backward, both having the same probability. More important is the fact that time reversibility simplifies the underlying mathematics as illustrated in the following lemma. The lemma states that if a probability distribution q has the property that the probability of traversing each edge is the same in both directions, then the probability distribution must be the steady state distribution of the Markov chain. The lemma is used frequently. Lemma 1.10 In a strongly connected Markov chain with transition probabilities pij , if a
+vector q with non-negative components satisfies qipij = qjpji for all i and j, then qi/
 P
 k
-qk is the stationary probability of node i.
-Proof: Since the chain is strongly connected, there is a unique stationary probability
-vector π satisfying the equations πP = π and P
-i
-πi = 1. Now q/
-P
+qk is the stationary probability of node i. Proof: Since the chain is strongly connected, there is a unique stationary probability
+vector π satisfying the equations πP = π and P i
+πi = 1. Now q/ P
 k
 qk satisfies these
 equations since P
@@ -222,11 +141,10 @@ In graph theory an undirected graph has two kinds of incidence matrices: unorien
 
 - identification problem of neorons in extra-cellular brain recordings based on their activity.
 
-~~ one to one correspondence between vertices over time.~~
+~~one to one correspondence between vertices over time.~~
 
 ## Problem formation
  A graph $G(V,E)$ consists of a set of vertices $V$ connected by edges from the set $E$. A directed graph is a graph in which edges can be traversed in only one direction. A markov Chain is directed graph which vertices correspond to states and directed edges correspond to state trasitions. A directed path through this graph is a sequence of state transitions from one state to another. 
-~~one to one correspondence between vertices over time.~~
 
 
 
