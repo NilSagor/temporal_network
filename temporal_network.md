@@ -1,4 +1,88 @@
-﻿# Research Question
+UNDERSTANDING GRAPH EMBEDDING METHODS AND THEIR
+APPLICATIONS 
+
+Modeling Complex Systems
+
+Research Question
+Dynamic Network Embedding
+
+Background of the study 
+
+Data model of dynamic networks
+
+Static network is defined as a (attributed) network.
+
+A continuous model of dynamic network G is a network with edges and nodes annotated with timestamps.
+
+
+
+
+
+
+the learned dynamic network embedding should capture the network structure
+and reflect temporal evolution
+not only maintain the structural relationships between nodes in vector space 
+but also required to describe the topological changes
+
+
+
+issues/challenges
+- Long-Term features preservation
+- Out-of-sample Node Embedding 
+- Prediction for future Embedding 
+
+- the edges and nodes are evolving over time
+- temporal constraints are imposed on neighborhood aggregation methods
+- the scale of network may grow over time, so efficient learning methods are important 
+
+Solution 
+
+
+
+pros
+- Capture temmporal information
+- Update representation in a fine-grained granularity of time 
+- Achieve high efficiency of updating representation 
+
+Aims and objectives 
+Aims
+encode nodes into low-dimensional space
+(similarity in the latent embedded space approximates similarity in the original high dimensional graph while preserving the structure property)
+
+Objectives                                                              Expected Outcome
+-- graph structure property preservation                                
+-- node similarity measurement in both the original and latent space
+-- encoder 
+
+
+
+hypothesis
+
+
+Expected Impact
+
+
+
+methodologies
+List of Resource used in the study
+
+
+Sort/Type of Data Collected
+
+Method for data analysis
+
+Literature Review
+
+- all the past work or material
+- List of books and study materials
+- Approach of Research study Analysis
+
+<("")>
+
+
+
+
+# Research Question
 
 The problem of data changing over time 
 
